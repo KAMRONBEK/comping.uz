@@ -1,9 +1,7 @@
-import Routers from "./router";
-
+import Routers from './router';
+import 'react-multi-carousel/lib/styles.css';
 function App() {
-  return (
-     <Routers/>
-  );
+	return <Routers />;
 }
 
 export default App;

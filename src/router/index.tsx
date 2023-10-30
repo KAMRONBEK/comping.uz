@@ -1,18 +1,13 @@
-
-import Home from "../pages/home";
-import { BrowserRouter as Router,Route, Routes } from 'react-router-dom'
+import Home from '../pages/home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const Routers = () => {
-  return (
-    <Router>
-    <Routes>
-      <Route
-        path={'/'}
-        element={<Home/>}
-      />
+	return (
+		<Router>
+			<Routes>
+				<Route path={'/'} element={<Home />} />
+			</Routes>
+		</Router>
+	);
+};
 
-  </Routes>
-  </Router>
-  )
-}
-
-export default Routers
+export default Routers;
