@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../../components/navbar/Navbar";
-import HomeSliderBar from "./homeSliderBar/HomeSliderBar";
+import { useEffect, useState } from "react";
 import {
   VictorIcon1,
   VictorIcon16,
   VictorIcon17,
+  VictorIcon18,
+  VictorIcon19,
   VictorIcon2,
   VictorIcon3,
   VictorIcon4,
 } from "../../assets/icons/icons";
 import NavModal from "../../components/navModal/NavModal";
-import Address from "./address/Address";
+import Navbar from "../../components/navbar/Navbar";
 import About from "./about/About";
-import Carusel from "./carusel/Carusel";
+import Address from "./address/Address";
 import Brend from "./brend/Brend";
 import Build from "./build/Build";
-import Form from "./form/Form";
+import HomeSliderBar from "./homeSliderBar/HomeSliderBar";
+import Technologies from "./technologies/Technologies";
+import HomeForm from "./form/Form";
 import Footer from "../../components/footer/Footer";
 
 const Home = () => {
@@ -46,12 +48,12 @@ const Home = () => {
       <div className=" sm:flex hidden  absolute top-[274px] sm:left-0 -z-1">
         <VictorIcon4 />
       </div>
-      {/* <div className="absolute left-0 right-0  bottom-[348px]  -z-1">
+      <div className=" md:flex hidden absolute left-0 right-0  md:bottom-[348px]  -z-1">
         <VictorIcon16 />
       </div>
-      <div className="absolute left-0 right-0  bottom-[168px]  -z-1">
+      <div className=" md:flex hidden absolute left-0 right-0  md:bottom-[168px]   -z-1">
         <VictorIcon17 />
-      </div> */}
+      </div>
 
       <div className="z-10 relative  w-full ">
         <Navbar
@@ -70,10 +72,10 @@ const Home = () => {
           <Address />
         </div>
         <About />
-        <Carusel />
+        <Technologies />
         <Brend />
         <Build />
-        <Form />
+        <HomeForm />
         <Footer />
       </div>
       <div className="z-11 relative">

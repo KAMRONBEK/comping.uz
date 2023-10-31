@@ -22,21 +22,21 @@ quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornar
 lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae."
       />
       <div className=" relative w-full flex  md:flex-row flex-col my-[90px]">
-        <div className="md:w-[45%] xl:h-[557px] lg:h[450px] w-full flex md:justify-statrt  items-center   ">
-          <div className="xl:w-[524px] xl:h-[557px] lg:h[450px]   rounded-tl-[240px] rounded-tr-[100px] rounded-br-[240px] rounded-bl-[100px] shadow-custom ">
+        <div className="md:w-[55%] xl:h-[557px] lg:h[500px] md:h[400px] flex md:justify-start justify-center   items-center ">
+          <div className="xl:w-[524px] xl:h-[557px] lg:w-[474px] lg:h[500px]  md:w-[374px] md:h[400px]   lg:rounded-tl-[240px] rounded-tl-[140px] lg:rounded-tr-[100px] rounded-tr-[60px] lg:rounded-br-[240px] rounded-br-[140px] lg:rounded-bl-[100px] rounded-bl-[60px] shadow-custom ">
             <img
               src={AboutImage}
-              className="rounded-tl-[240px] rounded-tr-[100px] rounded-br-[240px] rounded-bl-[100px] "
+              className="lg:rounded-tl-[240px] rounded-tl-[140px] lg:rounded-tr-[100px] rounded-tr-[60px] lg:rounded-br-[240px] rounded-br-[140px] lg:rounded-bl-[100px] rounded-bl-[60px] "
             />
           </div>
         </div>
-        <div className="md:w-[45%] lg:h-[557px]  w-full flex flex-col items-start justify-start  lg:pl-[80px]">
-          <div className="  mb-[48px]">
+        <div className="md:w-[45%] lg:h-[557px]  w-full flex flex-col md:items-start items-center justify-start  pl-[30px] ">
+          <div className="md:flex flex-col hidden mb-[48px]">
             <h1 className="text-[36px] text-[#fff] font-bold">ABOUT</h1>
             <h2 className="text-[34px] text-[#fff]   font-light">HYDRA VR</h2>
           </div>
-          <div className="">
-            <p className=" text-[#fff] text-[16px] font-normal mb-[28px]">
+          <div className="flex  flex-col items-center">
+            <p className=" text-[#fff] md:text-[16px] text-[12px] font-normal mb-[28px] md:mt-0 mt-[28px]">
               Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus
               mattis rhoncus urna neque viverra justo. Vivamus at augue eget
               arcu dictum. Ultrices gravida dictum fusce ut placerat orci.

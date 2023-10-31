@@ -1,59 +1,21 @@
-import {
-  AddressIcon,
-  CallIcon,
-  MessageIcon,
-} from "../../../assets/icons/icons";
-
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import "react-multi-carousel/lib/styles.css";
-import { Keyboard, Mousewheel } from "swiper/modules";
+import "swiper/css";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import HomeCaruselItem from "../../../components/homeCaruselItem/HomeCaruselItem";
-import { SwiperButtonNext } from "../../../components/swiperButtons/SwiperButtonNext";
-import { SwiperButtonPrev } from "../../../components/swiperButtons/SwiperButtonPrev";
-import AddressItem from "../../../components/addressItem/AddressItem";
-const data = [
-  {
-    id: 0,
-    icon: <AddressIcon />,
-    title: "Pay Us a Visit",
-    text: "Union St, Seattle, WA 98101, United States",
-    border: false,
-  },
-  {
-    id: 1,
-    icon: <CallIcon />,
-    title: "Give Us a Call",
-    text: "(110) 1111-1010",
-    border: false,
-  },
-  {
-    id: 2,
-    icon: <MessageIcon />,
-    title: "Send Us a Message",
-    text: "Contact@HydraVTech.com",
-    border: false,
-  },
-  {
-    id: 3,
-    icon: <MessageIcon />,
-    title: "Send Us a Message",
-    text: "Contact@HydraVTech.com",
-    border: false,
-  },
-];
+import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
-const Address = () => {
+import "swiper/swiper-bundle.css";
+import "./style.css";
+import { SwiperButtonPrev } from "../swiperButtons/SwiperButtonPrev";
+import { SwiperButtonNext } from "../swiperButtons/SwiperButtonNext";
+import HomeCaruselItem from "../homeCaruselItem/HomeCaruselItem";
+type propsType = {
+  data: any;
+};
+const Carusel = (props: propsType) => {
   return (
-    <div
-      className=" w-full  flex items-center my-[80px]   h-[167px] py-[26px]  md:px-[30px]  "
-      style={{
-        background:
-          "radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%)",
-        boxShadow: " 0px 4px 4px 0px rgba(192, 183, 232, 0.01)",
-        borderRadius: "90px",
-      }}
-    >
+    <>
       <Swiper
         cssMode={true}
         slidesPerView={4}
@@ -61,7 +23,6 @@ const Address = () => {
         mousewheel={true}
         keyboard={true}
         pagination={{ clickable: true }}
-        className=" z-20"
         breakpoints={{
           320: {
             slidesPerView: 1, // 640 piksel genişlikte iki slayt görünür
@@ -71,6 +32,10 @@ const Address = () => {
           },
           1024: {
             slidesPerView: 3, // 640 piksel genişlikte iki slayt görünür
+          },
+
+          1440: {
+            slidesPerView: 4, // 768 piksel genişlikte üç slayt görünür
           },
         }}
       >
@@ -97,16 +62,16 @@ const Address = () => {
             <BsChevronRight className="text-primary-blue text-[27px] group-hover:text-white group-hover:transition-all" />
           </div>
         </SwiperButtonNext>
-        {data.map((item: any) => {
+        {props.data.map((item: any) => {
           return (
             <SwiperSlide key={item.id}>
-              <AddressItem key={item.id} {...item} />
+              <HomeCaruselItem {...item} />
             </SwiperSlide>
           );
         })}
       </Swiper>
-    </div>
+    </>
   );
 };
 
-export default Address;
+export default Carusel;
