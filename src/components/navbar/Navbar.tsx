@@ -62,7 +62,7 @@ function Navbar(props: NavModalType) {
               );
             })}
           </ul>
-          <div className="md:flex hidden items-center ">
+          <div className="lg:flex hidden items-center ">
             <Button
               text={"CONTACT US"}
               onClick={undefined}
@@ -79,7 +79,7 @@ function Navbar(props: NavModalType) {
             ></Button>
           </div>
           <div
-            className="flex md:hidden"
+            className="flex lg:hidden"
             onClick={() => props.setOpenModal(true)}
           >
             <MenuIcon />

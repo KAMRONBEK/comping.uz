@@ -7,16 +7,16 @@ type propsType = {
 };
 const AboutItem = (props: propsType) => {
   return (
-    <div className=" w-full  xl:flex hidden   items-start justify-between">
-      <div className=" md:w-[50%]">
-        <h1 className="text-[#fff] uppercase text-[36px] font-bold  p-0 m-0 ">
+    <div className=" w-full flex  items-start justify-between">
+      <div className="lg:w-[50%] w-full flex flex-col  lg:items-start lg:justify-start items-center justify-center">
+        <h1 className="text-[#fff] uppercase md:text-[36px] text-[26px] font-bold  p-0 m-0 ">
           {props.title}
         </h1>
         <div className="flex items-center relative ">
-          <p className="text-[34px] text-[#fff] p-0 m-0 list-none  font-light">
+          <p className="md:text-[36px] text-[26px] text-[#fff] p-0 m-0 list-none  font-light">
             {props.title2}
           </p>
-          <div className=" w-[228px] flex items-center relative ml-[30px] ">
+          <div className=" lg:flex w-[228px] hidden items-center relative ml-[30px] ">
             <div className=" absolute ">
               <LineIcon />
             </div>
@@ -26,7 +26,7 @@ const AboutItem = (props: propsType) => {
           </div>
         </div>
       </div>
-      <div className=" md:w-[50%]">
+      <div className=" md:w-[50%] lg:flex hidden">
         <p className=" text-[#fff] text-[16px]">{props.text}</p>
       </div>
     </div>
