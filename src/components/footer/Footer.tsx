@@ -24,11 +24,13 @@ const Footer = () => {
         </div>
         <div className=" md:flex hidden justify-between  lg:pr-[30px] h-[196px] lg:ml-[40px] lg:mb-0 mb-[30px]">
           <ul className=" flex flex-col justify-between ">
-            <li className=" text-[16px] text-[#fff] font-bold">ABOUT</li>
-            <li className=" text-[16px] text-[#fff] font-bold">SERVICES</li>
-            <li className=" text-[16px] text-[#fff] font-bold">TECHNOLOGIES</li>
-            <li className=" text-[16px] text-[#fff] font-bold">HOW TO</li>
-            <li className=" text-[16px] text-[#fff] font-bold">JOIN HYDRA</li>
+            <li className=" text-[16px] text-[#fff] font-bold">Mahsulotlar</li>
+            <li className=" text-[16px] text-[#fff] font-bold">XIZMATLAR</li>
+            <li className=" text-[16px] text-[#fff] font-bold">
+              TEXNOLOGIYALAR
+            </li>
+            <li className=" text-[16px] text-[#fff] font-bold">QANDAY</li>
+            <li className=" text-[16px] text-[#fff] font-bold">BOG'LANISH</li>
           </ul>
           <div className=" lg:flex hidden">
             <FooterLineTopIcon />
@@ -38,22 +40,24 @@ const Footer = () => {
         <div className="md:flex hidden justify-between  pr-[30px]   h-[196px] ml-[40px] ">
           <ul className=" flex flex-col  ">
             <li className=" text-[16px] text-[#fff] font-bold mb-[12px]">
-              F.A.Q
+              TSS
             </li>
             <li className=" text-[16px] text-[#fff] font-bold mb-[12px]">
-              SITEMAP
+              SAYT XARITASI
             </li>
             <li className=" text-[16px] text-[#fff] font-bold mb-[12px]">
-              CONDITIONS
+              SHARTLAR
             </li>
             <li className=" text-[16px] text-[#fff] font-bold mb-[12px]">
-              LICENSES
+              LITSENZIYALAR
             </li>
           </ul>
           <FooterLineTopIcon />
         </div>
         <div className="flex flex-col  h-[196px] justify-between md:items-stretch items-center">
-          <h1 className=" text-[#fff] text-[16px]">SOCIALIZE WITH HYDRA</h1>
+          <h1 className=" text-[#fff] text-[16px]">
+            COMPING BILAN IJTIMOIY OLISH
+          </h1>
           <div className=" flex items-center justify-between ">
             <a
               href="https://www.facebook.com/"
@@ -99,20 +103,20 @@ const Footer = () => {
               <PinterestIcon />
             </a>
           </div>
-          <Button text="BUILD YOUR WORLD" />
+          <Button text="DUNYOINGIZNI QURIB" />
         </div>
       </div>
       <div className=" flex flex-col items-center mb-[19px] mt-[78px]">
         <FooterLineIcon />
         <div className=" flex md:flex-row flex-col items-center ">
           <p className=" font-bold text-[14px] uppercase text-[#fff] mt-[49px]">
-            2023 © HYDRA LANDING PAGE
+            2023 © COMPING OCHISH SAHIFA
           </p>
           <p className=" font-bold text-[14px] uppercase text-[#fff] md:mt-[49px] mt-[19px]">
-            BY ZINE. E. FALOUTI
+            ZINE BO'YICHA. E. FALOUTI
           </p>
           <p className=" font-bold text-[14px] uppercase text-[#fff] md:mt-[49px] mt-[19px]">
-            ALL RIGHTS RESERVED
+            BARCHA HUQUQLAR HIMOYALANGAN
           </p>
         </div>
       </div>

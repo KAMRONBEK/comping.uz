@@ -1,15 +1,14 @@
-import "swiper/css";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 import "swiper/swiper-bundle.css";
-import "./style.css";
-import { SwiperButtonPrev } from "../swiperButtons/SwiperButtonPrev";
-import { SwiperButtonNext } from "../swiperButtons/SwiperButtonNext";
 import HomeCaruselItem from "../homeCaruselItem/HomeCaruselItem";
+import { SwiperButtonNext } from "../swiperButtons/SwiperButtonNext";
+import { SwiperButtonPrev } from "../swiperButtons/SwiperButtonPrev";
+import "./style.css";
+import { Autoplay } from "swiper/modules";
 type propsType = {
   data: any;
 };
@@ -17,12 +16,12 @@ const Carusel = (props: propsType) => {
   return (
     <>
       <Swiper
-        cssMode={true}
         slidesPerView={4}
-        modules={[Mousewheel, Keyboard]}
-        mousewheel={true}
-        keyboard={true}
-        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
         breakpoints={{
           320: {
             slidesPerView: 1, // 640 piksel genişlikte iki slayt görünür
