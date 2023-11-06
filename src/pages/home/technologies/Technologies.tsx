@@ -61,7 +61,7 @@ const Technologies = () => {
             <h1 className="lg:text-[35px] text-[26px]  text-[#fff]  font-bold  leading-[48px] mb-[13px] md:text-start text-center ">
               O'zbekistonda shaxsiy kompyuter konfiguratori
             </h1>
-            <p className=" lg:text-[16px] text-[13px] text-[#fff]  mb-[30px]">
+            <p className=" lg:text-[16px] text-[13px] text-[#fff]  mb-[30px] md:text-start text-center">
               Kompyuteringizni protsessor, video karta, RAM bilan to'g'ri
               muvofiqlikda xatosiz o'zingiz yig'ing.
             </p>
