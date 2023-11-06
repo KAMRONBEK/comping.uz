@@ -4,42 +4,35 @@ import {
   MessageIcon,
 } from "../../../assets/icons/icons";
 
+import { useRef } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import "react-multi-carousel/lib/styles.css";
-import { Keyboard, Mousewheel } from "swiper/modules";
+
+import { Autoplay, Keyboard, Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import HomeCaruselItem from "../../../components/homeCaruselItem/HomeCaruselItem";
+import AddressItem from "../../../components/addressItem/AddressItem";
 import { SwiperButtonNext } from "../../../components/swiperButtons/SwiperButtonNext";
 import { SwiperButtonPrev } from "../../../components/swiperButtons/SwiperButtonPrev";
-import AddressItem from "../../../components/addressItem/AddressItem";
 const data = [
   {
     id: 0,
     icon: <AddressIcon />,
-    title: "Pay Us a Visit",
-    text: "Union St, Seattle, WA 98101, United States",
-    border: false,
+    title: "Bizga tashrif buyuring",
+    text: `Labzak 2 122 51100149 TASHKENT`,
+    link: "https://www.google.com/maps/place/Comping.Uz,+Labzak+2%2F122,+%D0%A2%D0%BEshkent+100149,+O%CA%BBzbekiston/@41.3359993,69.2704314,16z/data=!4m9!1m2!2m1!1sComping.Uz,+Labzak+2+122+51,+TASHKENT,+100149!3m5!1s0x38ae8bad3a9d4e7b:0xddccc7495fc164a5!8m2!3d41.3376166!4d69.2709525!16s%2Fg%2F11rfcy24p9",
   },
   {
     id: 1,
     icon: <CallIcon />,
-    title: "Give Us a Call",
-    text: "(110) 1111-1010",
-    border: false,
+    title: "Bizga qo'ng'iroq qiling",
+    text: "+998338082030",
+    link: "tel:+998901951625",
   },
   {
     id: 2,
     icon: <MessageIcon />,
-    title: "Send Us a Message",
+    title: "Bizga xabar yuboring",
     text: "Contact@HydraVTech.com",
-    border: false,
-  },
-  {
-    id: 3,
-    icon: <MessageIcon />,
-    title: "Send Us a Message",
-    text: "Contact@HydraVTech.com",
-    border: false,
+    link: "https://t.me/Comping_Uz",
   },
 ];
 
@@ -57,11 +50,15 @@ const Address = () => {
       <Swiper
         cssMode={true}
         slidesPerView={4}
-        modules={[Mousewheel, Keyboard]}
+        modules={[Mousewheel, Keyboard, Autoplay]}
         mousewheel={true}
         keyboard={true}
         pagination={{ clickable: true }}
-        className=" z-20"
+        className=" z-20 w-full h-full  "
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           320: {
             slidesPerView: 1, // 640 piksel genişlikte iki slayt görünür
@@ -99,7 +96,10 @@ const Address = () => {
         </SwiperButtonNext>
         {data.map((item: any) => {
           return (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide
+              key={item.id}
+              className=" flex items-center justify-center "
+            >
               <AddressItem key={item.id} {...item} />
             </SwiperSlide>
           );

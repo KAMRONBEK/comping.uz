@@ -7,7 +7,6 @@ import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/swiper-bundle.css";
-import "./style.css";
 
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { SwiperButtonPrev } from "../../../components/swiperButtons/SwiperButtonPrev";
@@ -16,22 +15,22 @@ const data = [
   {
     id: 0,
     number: "01",
+    title: "Kerakli uskunalarni bilan tanishing",
   },
   {
     id: 1,
+    title: `Uzingizga ma'qul uskunlarni qushing`,
     number: "02",
   },
   {
     id: 2,
     number: "03",
+    title: `Eng ma'qul mahsulotlarni tanlang `,
   },
   {
     id: 3,
     number: "04",
-  },
-  {
-    id: 4,
-    number: "05",
+    title: `Bizga murojat qiling`,
   },
 ];
 const Build = () => {
@@ -41,12 +40,11 @@ const Build = () => {
         <VictorIcon15 />
       </div>
       <Swiper
-        cssMode={true}
+        // cssMode={true}
         slidesPerView={4}
-        modules={[Mousewheel, Keyboard]}
-        mousewheel={true}
-        keyboard={true}
-        pagination={{ clickable: true }}
+        // modules={[Mousewheel, Keyboard, Pagination]}
+        // mousewheel={true}
+        // keyboard={true}
         breakpoints={{
           320: {
             slidesPerView: 1, // 640 piksel genişlikte iki slayt görünür
@@ -89,7 +87,7 @@ const Build = () => {
         {data.map((item) => {
           return (
             <SwiperSlide key={item.id}>
-              <BuildItem number={item.number} />
+              <BuildItem {...item} />
             </SwiperSlide>
           );
         })}

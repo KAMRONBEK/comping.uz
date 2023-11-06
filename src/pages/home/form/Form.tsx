@@ -10,7 +10,7 @@ const HomeForm = () => {
   };
 
   return (
-    <div className="xl:px-[84px] sm:px-[24px] mb-[120px]">
+    <div className="xl:px-[84px] sm:px-[24px] mb-[120px]" id="howto">
       <div
         className=" w-full relative  flex flex-col items-center py-[90px] lg:px-[107px] px-[20px] md:rounded-[100px] rounded-[40px] "
         style={{
@@ -19,24 +19,24 @@ const HomeForm = () => {
           boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
         }}
       >
-        <h1 className=" sm:text-[36px] text-[24px]  text-[#fff] font-bold mb-[30px]">
-          JOIN HYDRA
+        <h1 className=" sm:text-[36px] text-[24px]  text-[#fff] font-bold mb-[30px] uppercase">
+          COMPINGGA QO'SHILING
         </h1>
         <CircleIcon />
         <h2 className="sm:text-[36px] text-[24px]  text-center text-[#fff]  font-light mt-[21px] ">
-          Let’s Build Your VR Experience
+          Kompyuter tajribangizni yarataylik
         </h2>
         <div className=" w-full flex md:flex-row flex-col md:items-center mt-[16px] ">
-          <DefaultInput placeholder="First Name" />
-          <DefaultInput placeholder="Last Name" />
+          <DefaultInput placeholder="Ism" />
+          <DefaultInput placeholder="Familiya" />
         </div>
         <div className=" w-full flex  md:flex-row flex-col md:items-center  ">
-          <DefaultInput placeholder="Email" />
-          <DefaultInput placeholder="Phone Number" />
+          <DefaultInput placeholder="Elektron pochta" />
+          <DefaultInput placeholder="Telefon raqami" />
         </div>
-        <DefaultInput placeholder="Subject" />
-        <DefaultInput textarea={true} placeholder="Tell Us Something..." />
-        <Button text="SEND TO HYDRA" className={" mt-[57px]  "} />
+        <DefaultInput placeholder="Mavzu" />
+        <DefaultInput textarea={true} placeholder="Bizga nimadir ayting..." />
+        <Button text="COMPING GA YUBORISH" className={" mt-[57px]  "} />
       </div>
     </div>
   );

@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { LogoIcon, LogoIcon2, MenuIcon } from "../../assets/icons/icons";
-import Button from "../button/Button";
-import { Link } from "react-router-dom";
-import { NavModalType } from "../navModal/NavModal";
+import { MenuIcon } from "../../assets/icons/icons";
 import LogoImage from "../../assets/icons/logo.png";
+import Button from "../button/Button";
+import { NavModalType } from "../navModal/NavModal";
 const data = [
   {
     id: 0,
-    title: "ABOUT",
-    link: "/about",
+    title: "Mahsulotlar",
+    link: "/#about",
   },
   {
     id: 0,
-    title: "SERVICES",
-    link: "/services",
+    title: "XIZMATLAR",
+    link: "/#services",
   },
   {
     id: 0,
-    title: "TECHNOLOGIES",
-    link: "/technologies",
+    title: "TEXNOLOGIYALAR",
+    link: "/#technologies",
   },
   {
     id: 0,
-    title: "HOW TO",
-    link: "/howto",
+    title: "QANDAY",
+    link: "/#howto",
   },
 ];
 function Navbar(props: NavModalType) {
@@ -37,41 +35,51 @@ function Navbar(props: NavModalType) {
         } w-full  sm:flex sm:items-center  justify-between xl:px-[84px] xs:px-[24px] `}
       >
         <div className="w-full flex  items-center justify-between ">
-          <div className="cursor-pointer flex items-center">
-            <div className="z-1 relative">
-              <img
-                src={LogoImage}
-                className="md:w-[102px] md:h-[103px] w-[69px] h-[70px]"
-              />
-            </div>
+          <a
+            href="/"
+            role="tab"
+            aria-selected="true"
+            data-testid="select-about_us"
+          >
+            <div className="cursor-pointer flex items-center">
+              <div className="z-1 relative">
+                <img
+                  src={LogoImage}
+                  className="md:w-[102px] md:h-[103px] w-[69px] h-[70px]"
+                />
+              </div>
 
-            <div className=" text-[#C0B7E8] xl:text-[40px] lg:text-[30px] md:text-[20px] uppercase ml-[5px]">
-              <h1>Comping.Uz</h1>
+              <div className=" text-[#C0B7E8] xl:text-[40px] lg:text-[30px] md:text-[20px] uppercase ml-[5px]">
+                <h1>Comping.Uz</h1>
+              </div>
             </div>
-          </div>
+          </a>
           <ul className="items-center lg:flex hidden">
             {data.map((item, index) => {
               return (
                 <a
                   href={item.link}
                   key={index.toString()}
-                  className="text-white text-[12px] font-bold xl:mr-[42px] mr-[10px] "
+                  role="tab"
+                  aria-selected="true"
+                  data-testid="select-about_us"
+                  className="text-white text-[12px] font-bold xl:mr-[42px] mr-[10px] uppercase "
                 >
                   {item.title}
                 </a>
               );
             })}
           </ul>
-          <div className="lg:flex hidden items-center ">
+          <div className="lg:flex hidden items-center  ">
             <Button
-              text={"CONTACT US"}
+              text={"BOG'LANISH"}
               onClick={undefined}
               className={
                 "hover:bg-[#8176AF] hover:text[#343045] cursor-pointer hover:border-[#8176AF] border-[2px] mr-[10px]"
               }
             ></Button>
             <Button
-              text={"JOIN HYDRA"}
+              text={"QO'SHILING"}
               onClick={undefined}
               className={
                 "hover:bg-[#8176AF] hover:text[#343045] cursor-pointer hover:border-[#8176AF] border-[2px] ml-[10px]"
