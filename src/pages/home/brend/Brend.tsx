@@ -47,13 +47,13 @@ const data = [
 const Brend = () => {
   return (
     <div
+      className="w-full flex flex-col xl:px-[84px] xs:px-[24px]  pt-[100px] "
       id="technologies"
-      className="w-full flex flex-col xl:px-[84px] xs:px-[24px] mb-[120px]  "
     >
       <div>
         <h1 className=" text-white text-[26px] ">Brendlar</h1>
       </div>
-      <div className="w-full  mb-[90px] mt-[30px] ">
+      <div className="w-full  mb-[90px] mt-[30px] " id="howto">
         <Swiper
           // cssMode={true}
           slidesPerView={4}
@@ -113,13 +113,6 @@ const Brend = () => {
           })}
         </Swiper>
       </div>
-      <AboutItem
-        title="Biz qanday quramiz"
-        title2="COMPING BILANMI?"
-        text="Hayot donishmandlari keksalikda, nabiralarda yashaydi.Men bundan juda xursandman
-Endi ommaviy rivojlanishni kim moliyalashtiradi? Viverra yuk mashinalariga juda ko'p er kerak. Bezatish uchun
-karavotga sarmoya kiritiladi. To'shak - bu dunyo hayotining katta qush ko'rinishi."
-      />
     </div>
   );
 };

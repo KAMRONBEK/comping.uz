@@ -15,12 +15,12 @@ const data = [
   },
   {
     id: 0,
-    title: "TEXNOLOGIYALAR",
+    title: "Xamkorlar",
     link: "/#technologies",
   },
   {
     id: 0,
-    title: "QANDAY",
+    title: "QANDAY ?",
     link: "/#howto",
   },
 ];
@@ -30,7 +30,7 @@ function Navbar(props: NavModalType) {
       <div
         className={`${
           props.isScrolled
-            ? "fixed top-0  w-full 2xl:w-[1440px] xl:px-[84px] xs:px-[24px]   bg-[#302C42] z-50"
+            ? "fixed top-0  w-full 2xl:w-[1440px] xl:px-[84px] xs:px-[24px]   bg-[#302C42] z-50  shadow-2xl "
             : "relative"
         } w-full  sm:flex sm:items-center  justify-between xl:px-[84px] xs:px-[24px] `}
       >

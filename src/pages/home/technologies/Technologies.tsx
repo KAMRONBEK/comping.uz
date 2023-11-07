@@ -40,15 +40,13 @@ const data = [
 ];
 const Technologies = () => {
   return (
-    <div
-      id="services"
-      className=" flex relative mt-[102px] flex-col xl:px-[84px] xs:px-[24px]"
-    >
+    <div className=" flex relative pt-[102px] flex-col xl:px-[84px] xs:px-[24px]">
       <div className=" lg:flex hidden absolute left-0 right-0 ">
         <VictorIcon14 />
       </div>
       <Carusel data={data} />
-      <div className="relative md:h-[450px]  sm:h-[800px] h-[700px] w-full rounded-[10px]  overflow-hidden my-[70px] shadow-xl   ">
+      <div id="services" className=" h-[130px]"></div>
+      <div className="relative md:h-[450px]  sm:h-[800px] h-[700px] w-full rounded-[10px]  overflow-hidden  shadow-xl">
         <div
           style={{
             background:

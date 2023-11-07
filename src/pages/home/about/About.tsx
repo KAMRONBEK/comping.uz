@@ -25,7 +25,7 @@ const data = [
 ];
 const About = () => {
   return (
-    <div className="relative xl:px-[84px] xs:px-[24px]" id="about">
+    <div className="relative xl:px-[84px] xs:px-[24px] ">
       <div className=" xl:flex hidden absolute left-0 right-0 top-[200px] ">
         <VictorIcon7 />
       </div>

@@ -10,7 +10,7 @@ const HomeForm = () => {
   };
 
   return (
-    <div className="xl:px-[84px] sm:px-[24px] mb-[120px]" id="howto">
+    <div className="xl:px-[84px] sm:px-[24px] mb-[120px]">
       <div
         className=" w-full relative  flex flex-col items-center py-[90px] lg:px-[107px] px-[20px] md:rounded-[100px] rounded-[40px] "
         style={{

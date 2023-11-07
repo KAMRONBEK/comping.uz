@@ -35,7 +35,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#302C42] min-h-screen  overflow-hidden w-full 2xl:w-[1440px] relative  mx-auto py-[50px] ">
+    <div
+      className={`bg-[#302C42] min-h-screen  overflow-hidden w-full 2xl:w-[1440px] relative  mx-auto py-[50px]`}
+    >
       <div className=" absolute sm:top-[170px] sm:right-0 top-[77px] -right-[59px] -z-1">
         <VictorIcon1 />
       </div>
@@ -55,22 +57,20 @@ const Home = () => {
         <VictorIcon17 />
       </div>
 
-      <div className="z-10 relative  w-full ">
+      <div
+        className={`z-10 relative  w-full ${isScrolled ? "pt-[110px]" : "0"}  `}
+      >
         <Navbar
           openModal={openModal}
           setOpenModal={setOpenModal}
           isScrolled={isScrolled}
         />
-        {isScrolled ? (
-          <div className="mt-[210px]">
-            <HomeSliderBar />
-          </div>
-        ) : (
-          <HomeSliderBar />
-        )}
+        <HomeSliderBar />
+
         <div className="xl:px-[84px] xs:px-[24px]">
           <Address />
         </div>
+        <div id="about" className=" w-full h-[120px] "></div>
         <About />
         <Technologies />
         <Brend />

@@ -11,7 +11,7 @@ type itemType = {
 const HomeCaruselItem = (item: itemType) => {
   return (
     <div
-      className=" md:w-[310px] w-[280px]   rounded-[40px] min-h-[511px]  z-10 flex flex-col items-center pb-[20px] "
+      className=" md:w-[310px] w-[280px]   rounded-[40px] min-h-[511px]  z-10 flex flex-col items-center  "
       style={{
         background:
           "radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%)",
