@@ -9,23 +9,23 @@ export type NavModalType = {
 const data = [
   {
     id: 0,
-    title: "ABOUT",
-    link: "/about",
+    title: "Mahsulotlar",
+    link: "/#about",
   },
   {
     id: 0,
-    title: "SERVICES",
-    link: "/services",
+    title: "XIZMATLAR",
+    link: "/#services",
   },
   {
     id: 0,
-    title: "TECHNOLOGIES",
-    link: "/technologies",
+    title: "Xamkorlar",
+    link: "/#technologies",
   },
   {
     id: 0,
-    title: "HOW TO",
-    link: "/howto",
+    title: "QANDAY ?",
+    link: "/#howto",
   },
 ];
 const NavModal = (props: NavModalType) => {
@@ -45,10 +45,12 @@ const NavModal = (props: NavModalType) => {
         </button>
         <div className="cursor-pointer flex  items-center ">
           <div className="z-1 relative">
-            <img
-              src={LogoImage}
-              className="md:w-[102px] md:h-[103px] w-[69px] h-[70px]"
-            />
+            <a href="#">
+              <img
+                src={LogoImage}
+                className="md:w-[102px] md:h-[103px] w-[69px] h-[70px]"
+              />
+            </a>
           </div>
 
           <div className=" text-[#C0B7E8] xl:text-[40px] lg:text-[30px] md:text-[20px] uppercase ml-[5px]">
@@ -63,21 +65,28 @@ const NavModal = (props: NavModalType) => {
                 className="text-white text-[12px] font-bold xl:mr-[42px]  mb-[15px]"
                 key={index.toString()}
               >
-                {item.title}
+                <a
+                  href={item.link}
+                  role="tab"
+                  aria-selected="true"
+                  data-testid="select-about_us"
+                >
+                  {item.title}
+                </a>
               </li>
             );
           })}
         </ul>
         <div className=" flex sm:flex-row flex-col  sm:items-center items-start  mt-[40px]">
           <Button
-            text={"CONTACT US"}
+            text={"BOG'LANISH"}
             onClick={undefined}
             className={
               "hover:bg-[#8176AF] hover:text[#343045] cursor-pointer hover:border-[#8176AF] border-[2px]  sm:mr-[10px]  sm:w-[50%] w-full sm:mb-0 mb-[20px] "
             }
           ></Button>
           <Button
-            text={"JOIN HYDRA"}
+            text={"QO'SHILING"}
             onClick={undefined}
             className={
               "hover:bg-[#8176AF] hover:text[#343045] cursor-pointer hover:border-[#8176AF] border-[2px] sm:ml-[10px] sm:w-[50%] w-full"

@@ -39,7 +39,7 @@ const data = [
 const Address = () => {
   return (
     <div
-      className=" w-full  flex items-center my-[80px]   h-[167px] py-[26px]  md:px-[30px]  "
+      className=" w-full  flex items-center mt-[80px]   h-[167px] py-[26px]  md:px-[30px]  "
       style={{
         background:
           "radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%)",
